@@ -5,12 +5,14 @@
 
 public class Main {
     public static void main(String[] args) {
-        User user1 = User.getSingleton("Mario", 21);
+        User user1 = User.getSingleton();
+        user1.setName("Mario");
+        user1.setAge(21);
         System.out.println(user1);
 
-        User user2 = User.getSingleton("Gino", 38);
+        User user2 = User.getSingleton();
         user2.setName("Gino");
-        user2.setAge(38);
+        user2.setAge(37);
         System.out.println(user2);
     }
 }

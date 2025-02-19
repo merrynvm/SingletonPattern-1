@@ -1,6 +1,6 @@
 public class User {
-    private String name;
-    private Integer age;
+    private static String name;
+    private static Integer age;
 
     //creo una variabile statica per la chiamata d'istanza del singleton
     private static User singleton;
@@ -11,9 +11,9 @@ public class User {
     }
 
     //metodo per la chiamata dell'istanza del singleton
-    public static User getSingleton(String nome, int eta) {
+    public static User getSingleton() {
         if (singleton == null) {
-            singleton = new User(nome, eta);
+            singleton = new User(name, age);
         }
         return singleton;
     }
